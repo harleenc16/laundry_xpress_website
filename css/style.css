@@ -177,6 +177,37 @@ h1, h2, h3, h4 {
   font-size: 0.8rem;
 }
 
+/* Mobile: stack top bar items vertically */
+@media (max-width: 640px) {
+  .top-bar {
+    padding: 6px 0;
+    font-size: 0.75rem; /* smaller base text on mobile */
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .top-bar-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .top-bar-info a,
+  .top-bar-info span {
+    gap: 4px; /* tighter icon-to-text spacing */
+  }
+
+  .top-bar-promo {
+    margin-top: 2px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+  }
+}
+
 /* Navigation Header */
 header.site-header {
   background-color: var(--white);
