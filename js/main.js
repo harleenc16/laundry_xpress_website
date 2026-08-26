@@ -85,4 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => observer.observe(card));
   }
+
+  // Amenity Cards Fade/Slide-In Observer
+  const amenityCards = document.querySelectorAll('.amenity-card');
+  if (amenityCards.length > 0) {
+    const amenityObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          amenityObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    amenityCards.forEach(card => amenityObserver.observe(card));
+  }
 });
