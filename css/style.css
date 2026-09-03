@@ -458,7 +458,7 @@ header.site-header {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 25px;
-  background-color: var(--white);
+  background-color: var(--light-green);
   transition: all 0.3s ease;
   position: relative;
   display: flex;
@@ -646,7 +646,7 @@ header.site-header {
 /* FAQ Accordion Section */
 .faq-section {
   padding: 90px 0;
-  background-color: var(--white);
+  background-color: #f8f9fa;
 }
 
 .faq-container {
